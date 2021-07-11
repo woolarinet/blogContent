@@ -1,8 +1,6 @@
 ---
-{
-  title: 'Hello World',
-  category: 'javascript'
-}
+title: 'Hello World',
+category: 'javascript'
 ---
 
 # TEST

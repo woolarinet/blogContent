@@ -1,8 +1,6 @@
 ---
-{
-  title: 'Hello World2',
-  category: 'Operating System'
-}
+title: 'Hello World2'
+category: 'Operating System'
 ---
 
 # TEST
