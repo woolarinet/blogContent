@@ -1,8 +1,9 @@
 ---
 title: 'Hello World2'
 category: 'Operating System'
-date: '2021-07-12'
 desc: 'this is test file'
+date: '2021-07-12'
+thumb: 'os'
 ---
 
 # TEST
