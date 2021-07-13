@@ -1,6 +1,6 @@
 ---
 title: '[코어 자바스크립트] 01.데이터 타입'
-category: 'JavaScript'
+category: 'javascript'
 desc: '[코어 자바스크립트] 데이터 타입에 대하여'
 date: '2021-07-14'
 thumb: 'js'
