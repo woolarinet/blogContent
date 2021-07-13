@@ -1,7 +1,7 @@
 ---
 title: 'Hello OS'
 category: 'Operating_System'
-desc: 'this is test file'
+desc: 'this is test md file'
 date: '2021-07-12'
 thumb: 'os'
 ---
