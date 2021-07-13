@@ -104,5 +104,6 @@ var copyObjViaJSON = function(target) {
 - *참조형 데이터를 불변값으로 사용하기 위해서는 깊은 복사를 이용하면 된다.*
 - *'없음'을 나타내는 두가지 값 undefined 와 null에서 , 본래의 의미에 따라 없음을 표현하기 위해 명시적으로 undefined를 대입하는 것은 지양하는 것이 좋다*
 
+  &nbsp;
 ## References
 - 코어 자바스크립트 (p.11 - p.35)
