@@ -9,4 +9,4 @@ thumb: 'os'
 # TEST
 test md file
 
-![web_app_architecture.png](https://www.github.com/woolarinet/blog_content/blob/main/images/Web_Application/Architecture/1.png)
+![web_app_architecture.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/1.png)
