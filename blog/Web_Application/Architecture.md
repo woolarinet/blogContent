@@ -40,19 +40,17 @@ thumb: 'web'
 
 ![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png)
 
-웹서버는 클라이언트의 요청을 HTTP를 기반으로하여 응답하는 기능을 담당하는데,
-정적인 콘텐츠를 제공하며 *WAS(Web Application Server)*를 거치지 않고 바로 자원을 제공해준다.
-또한, 동적인 컨텐츠 제공을 위해 클라이언트의 요청을 WAS로 보내 처리결과를 클라이언트에게 응답해준다.
+##### 웹서버는 클라이언트의 요청을 HTTP를 기반으로하여 응답하는 기능을 담당하는데, 정적인 콘텐츠를 제공하며 *WAS(Web Application Server)*를 거치지 않고 바로 자원을 제공해준다. 또한, 동적인 컨텐츠 제공을 위해 클라이언트의 요청을 WAS로 보내 처리결과를 클라이언트에게 응답해준다.
 
-나는 선호뮤직을 개발할 때, NGINX를 이용하여 *Content Security Policy*를 설정해 보안을 한층 더 강화한 경험이 있다.
+*나는 선호뮤직을 개발할 때, NGINX를 이용하여 *Content Security Policy*를 설정해 보안을 한층 더 강화한 경험이 있다.*
 
 &nbsp;    
 ## 웹 어플리케이션 서버 (Web Application Server)
 
-
+  &nbsp;
 ![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png)
 
-**Web Application Server**란 동적컨텐츠를 제공하기 위한 *Application Server*이다. 주로 데이터베이스 서버와 같이 수행되며, 트랜잭션 처리, 보안, 비지니스 로직 처리 등을 담당한다.
+##### **Web Application Server**란 동적컨텐츠를 제공하기 위한 *Application Server*이다. 주로 데이터베이스 서버와 같이 수행되며, 트랜잭션 처리, 보안, 비지니스 로직 처리 등을 담당한다.
 *Web Server*와 *Web Container*의 기능을 모두 갖춘 서버라고 할 수 있을 것 같다.
 
 &nbsp;    

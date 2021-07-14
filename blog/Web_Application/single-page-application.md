@@ -1,5 +1,5 @@
 ---
-title: 'SPA란?'
+title: 'SPA (Single-Page-Application)'
 category: 'Web_Application'
 desc: 'SPA(Single Page Application) 기본 개념'
 date: '2021-07-15'
