@@ -1,6 +1,6 @@
 ---
 title: '웹 어플리케이션 아키텍쳐란?'
-category: 'Web_Application'
+category: 'Web'
 desc: '웹 어플리케이션 아키텍쳐(Web Application Architecture)의 기본적인 이해'
 date: '2021-07-14'
 thumb: 'web'
@@ -8,7 +8,7 @@ thumb: 'web'
 
 # 웹 어플리케이션 아키텍쳐 (Web Application Architecture)
 
-![web_app_architecture.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/1.png)
+![web_app_architecture.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web/Architecture/1.png)
 
 웹 어플리케이션의 구조를 간략히 봤을 때 위와 같은 구조가 나온다. 크게는 클라이언트 사이드(프레젠테이션 로직 처리)과 서버 사이드(비지니스 로직 처리)로 나뉘며 기본적으로 웹 브라우저, 웹 서버, 웹 어플리케이션 서버 데이터베이스 서버로 구성되어 있다.
   
@@ -17,7 +17,7 @@ thumb: 'web'
 
 웹 브라우저는 서버와의 Request, Response 을 통해 상호작용하며 어플리케이션의 기능을 처리하고 HTML과 CSS 명세에 따라 HTML파일을 해석 및 표시해준다.
 
-![web_browser.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/2.png)
+![web_browser.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web/Architecture/2.png)
 
 웹 브라우저의 대략적인 구성요소이다.
 
@@ -38,7 +38,7 @@ thumb: 'web'
 
 클라이언트로부터 HTTP요청을 받아 정적 웹 페이지를 응답해주는 소프트웨어이다.
 
-![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png)
+![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web/Architecture/3.png)
 
 ##### 웹서버는 클라이언트의 요청을 HTTP를 기반으로하여 응답하는 기능을 담당하는데, 정적인 콘텐츠를 제공하며 *WAS(Web Application Server)*를 거치지 않고 바로 자원을 제공해준다. 또한, 동적인 컨텐츠 제공을 위해 클라이언트의 요청을 WAS로 보내 처리결과를 클라이언트에게 응답해준다.
 
@@ -48,7 +48,7 @@ thumb: 'web'
 ## 웹 어플리케이션 서버 (Web Application Server)
 
   &nbsp;
-![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png)
+![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web/Architecture/4.png)
 
 ##### **Web Application Server**란 동적컨텐츠를 제공하기 위한 *Application Server*이다. 주로 데이터베이스 서버와 같이 수행되며, 트랜잭션 처리, 보안, 비지니스 로직 처리 등을 담당한다.
 *Web Server*와 *Web Container*의 기능을 모두 갖춘 서버라고 할 수 있을 것 같다.

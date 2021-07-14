@@ -1,6 +1,6 @@
 ---
 title: 'REST, REST API, RESTful API'
-category: 'Web_Application'
+category: 'Web'
 desc: 'REST에 관한 전반적인 개념 정리'
 date: '2021-07-15'
 thumb: 'web'
@@ -8,7 +8,7 @@ thumb: 'web'
 
 # REST (Representational State Transfer)
 
-![rest.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/rest/1.png)
+![rest.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web/rest/1.png)
 - HTTP URI를 통해 자원을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.
 - 클라이언트와 서버사이의 통신 방식 중 하나이며 모든 것을 Resource(명사)로 표현하며 세부 Resource에는 id를 붙인다.
 - HTTP 표준을 따르는 모든 플랫폼에서 사용이 가능하며 별도의 인프라를 구축할 필요가 없다.
