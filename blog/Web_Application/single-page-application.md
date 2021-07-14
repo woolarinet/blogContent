@@ -41,5 +41,3 @@ thumb: 'web'
   &nbsp;
 ### References
 - <https://www.kdata.or.kr/info/info_04_view.html?field=&keyword=&type=techreport&page=43&dbnum=174725&mode=detail&type=techreport>
-
-- <https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98>
