@@ -40,4 +40,4 @@ thumb: 'web'
   
   &nbsp;
 ### References
-- <https://www.kdata.or.kr/info/info_04_view.html?field=&keyword=&type=techreport&page=43&dbnum=174725&mode=detail&type=techreport>
+> - <https://www.kdata.or.kr/info/info_04_view.html?field=&keyword=&type=techreport&page=43&dbnum=174725&mode=detail&type=techreport>
