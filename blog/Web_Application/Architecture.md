@@ -38,7 +38,7 @@ thumb: 'web'
 
 클라이언트로부터 HTTP요청을 받아 정적 웹 페이지를 응답해주는 소프트웨어이다.
 
-![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png)
+<!-- ![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png) -->
 
 웹서버는 클라이언트의 요청을 HTTP를 기반으로하여 응답하는 기능을 담당하는데,
 정적인 콘텐츠를 제공하며 *WAS(Web Application Server)*를 거치지 않고 바로 자원을 제공해준다.
