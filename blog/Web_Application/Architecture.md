@@ -50,7 +50,7 @@ thumb: 'web'
 ## 웹 어플리케이션 서버 (Web Application Server)
 
 
-![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png)
+<!-- ![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png) -->
 
 **Web Application Server**란 동적컨텐츠를 제공하기 위한 *Application Server*이다. 주로 데이터베이스 서버와 같이 수행되며, 트랜잭션 처리, 보안, 비지니스 로직 처리 등을 담당한다.
 *Web Server*와 *Web Container*의 기능을 모두 갖춘 서버라고 할 수 있을 것 같다.
