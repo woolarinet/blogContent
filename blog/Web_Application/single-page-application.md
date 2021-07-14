@@ -25,8 +25,8 @@ thumb: 'web'
 
 ## 컴포넌트(Component)
 - 하나의 블록으로 이해하는 것이 편할 것 같다. 이 블록들이 모여 한 페이지를 작성하고 특정 부분만 데이터를 바인딩하는 개념이다.
-![component1](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/spa/1.png)
-![component2](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/spa/2.png)
+![component1.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/spa/1.png)
+![component2.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/spa/2.png)
 - 화면을 빠르게 구조화하여 일괄적인 패턴으로 개발할 수 있으며 재사용하기 훨씬 편리하며 유지보수비용이 적은 장점이 있다.
 - 최상위 컴포넌트 위에 작성되는 것을 기준으로 트리 구조를 형성한다.
 
