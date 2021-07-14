@@ -38,7 +38,7 @@ thumb: 'web'
 
 클라이언트로부터 HTTP요청을 받아 정적 웹 페이지를 응답해주는 소프트웨어이다.
 
-<!-- ![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png) -->
+![web_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/3.png)
 
 웹서버는 클라이언트의 요청을 HTTP를 기반으로하여 응답하는 기능을 담당하는데,
 정적인 콘텐츠를 제공하며 *WAS(Web Application Server)*를 거치지 않고 바로 자원을 제공해준다.
@@ -50,7 +50,7 @@ thumb: 'web'
 ## 웹 어플리케이션 서버 (Web Application Server)
 
 
-<!-- ![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png) -->
+![web_application_server.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Web_Application/Architecture/4.png)
 
 **Web Application Server**란 동적컨텐츠를 제공하기 위한 *Application Server*이다. 주로 데이터베이스 서버와 같이 수행되며, 트랜잭션 처리, 보안, 비지니스 로직 처리 등을 담당한다.
 *Web Server*와 *Web Container*의 기능을 모두 갖춘 서버라고 할 수 있을 것 같다.
