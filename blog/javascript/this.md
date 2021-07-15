@@ -47,7 +47,8 @@ console.log(this === global); // true
 ##### 이처럼 var로 선언한 전역변수와 전역객체의 프로퍼티는 호이스팅 여부 및 configurable 여부에서 차이를 보인다.
 
   &nbsp;
-# 메서드로서 호출할 때 내부에서의 this
+# 메서드로서 호출할 때 내부에서의 this  
+
 ## 함수로서 호출, 메서드로서 호출
   ``` javascript
   var func = function(x) {
