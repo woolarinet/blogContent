@@ -48,7 +48,7 @@ console.log(this === global); // true
 
   &nbsp;
 # 메서드로서 호출할 때 내부에서의 this  
-
+  &nbsp;
 ## 함수로서 호출, 메서드로서 호출
   ``` javascript
   var func = function(x) {
