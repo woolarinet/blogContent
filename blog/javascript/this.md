@@ -225,5 +225,5 @@ obj1.outer()
    - 요소를 순회하며 콜백함수를 반복호출하는 메서드는 별도의 인자로 this를 받기도 한다~ 
 
   &nbsp;
-> ## References
+## References
 - 코어 자바스크립트 (p.65 - p.93)
