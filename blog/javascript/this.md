@@ -127,7 +127,7 @@ obj1.outer()
   - new 명령어와 함께 함수를 호출하면 해당 함수가 생성자로서 동작한다.
   - 그리고 그 경우 내부의 this는 새로 만들 구체적인 인스턴스 자신이 된다.
 
-# 명시적으로 this를 바인딩하는 방법
+# 명시적으로 this를 바인딩하는 방법  
 ## 1. call 메서드
   ``` javascript
   Function.prototype.call(thisArg[, arg1[, arg2[, ...]]])
