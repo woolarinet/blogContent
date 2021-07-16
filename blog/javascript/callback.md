@@ -18,7 +18,7 @@ var cbFunc = function() {
   console.log(count);
   if (++count > 4) clearInterval(timer);
 };
-var timer = setInterval(cbFunc, 300)
+var timer = setInterval(cbFunc, 300);
 ```
 - 여기서 cbFunc 함수가 콜백 함수가 된다.
 cbFunc 함수는 호출주체가 사용자며 제어권 또한 사용자에게 있다.  
@@ -52,7 +52,7 @@ cbFunc 함수는 호출주체가 사용자며 제어권 또한 사용자에게 �
 - **비동기 코드**는 별도의 대상에 무언가를 요청하고 그에 대한 응답이 왔을 때 비로소 어떠한 동작을 실행하도록 대기하는 행위와 관련된 코드이다.
 
 - 현대의 자바스크립트는 웹의 복잡도가 높아진 만큼 비동기적인 코드의 비중이 예전보다 훨씬 높아짐에 따라 콜백 지옥에 빠지기도 훨씬 쉬워졌다.
-  - 비동기적인 일련의 작업을 동기적으로 보이게끔 처리해주는 장치를 마련하고자 ES6에서는 Promise, Generator 등이 ehdlqehoTrh, ES2017에서는 async/await가 도입됐다.
+  - 비동기적인 일련의 작업을 동기적으로 보이게끔 처리해주는 장치를 마련하고자 ES6에서는 Promise, Generator 등이 도입됐고, ES2017에서는 async/await가 도입됐다.
   ``` javascript
   // Promise + async/awiat
   var addPost = function (name) {
