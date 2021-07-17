@@ -38,7 +38,7 @@ console.dir(Array);
 Array.isArray(arr);  // true
 arr.isArray();  // TypeError: arr.isArray is not a function
 ```
-- 먼저 위의 출력 결과는 다음과 같다. (크롬 개발자도구)
+- 먼저 위의 출력 결과는 다음과 같다. (크롬 개발자도구)  
   ![arr.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/javascript/2.png)
   - 왼쪽은 arr 변수를, 오른쪽은 Array를 출력한 결과이다.
   - instance인 [1, 2]의 __proto__는 Array.prototype을 참조하는데, 생략이 가능하기 때문에 인스턴스가 push, pop등의 메서드를 자신의 것처럼 호출할 수 있다. 하지만 밑의 isArray나 from 등의 정적 메서드들은 프로퍼티 내부에 있지 않기때문에 호출할 수 없다. 따라서 에러가 나기에 이들은 Array 생성자 함수에서 직접 접근해야 실행이 가능하다.
