@@ -29,7 +29,8 @@ Person.prototype.getName = function() {
 };
 var suzi = new Person('Suzi');
 suzi.getName();  // Suzi   
-                // (__proto__는 생략 가능한 프로퍼티 -> 생략하지 않는다면 undefined 출력 -> 이유는 03.this 단원에서 이미 배웠다! 계속 복습하며 공부하쟝)
+                // (__proto__는 생략 가능한 프로퍼티 -> 생략하지 않는다면 undefined 출력
+                //  이유는 03.this 단원에서 이미 배웠다! 계속 복습하며 공부하쟝)
 var me = new Person('sunho');
 me.getName(); // sunho
 ```
