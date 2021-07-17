@@ -4,7 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 프로토타입에 대한 이해'
 date: '2021-07-16'
 thumb: 'js'
---- 
+---
 
 # 프로토타입의 개념 이해
 - 자바스크립트는 prototype 기반 언어이다.
