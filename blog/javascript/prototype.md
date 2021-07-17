@@ -4,7 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 프로토타입에 대한 이해'
 date: '2021-07-16'
 thumb: 'js'
----
+--- 
 
 # 프로토타입의 개념 이해
 - 자바스크립트는 prototype 기반 언어이다.
@@ -12,11 +12,14 @@ thumb: 'js'
 
  &nbsp;
   ``` javascript
-   var instance = new Constructor();
-   ```
+  var instance = new Constructor();
+  ```
 - 생성자 함수(Constructor)를 new 연산자와 함께 호출 하면 Constructor에서 정의된 내용을 바탕으로 새로운 인스턴스(instance)가 생성된다.
+
 - 이 때 instance에는 __proto__라는 프로퍼티가 자동으로 부여되는데 이 프로퍼티는 Constructor의 prototype이라는 프로퍼티를 참조한다.
+
 - prototype 객체 내부에는 인스턴스가 사용할 메서드가 저장되는데 그렇게 되면 인스턴스에서도 숨겨진 __proto__를 통해 메서드들에 접근할 수 있게 된다.
+
 ``` javascript
 var Person = function (name) {
   this._name = name;
@@ -25,7 +28,8 @@ Person.prototype.getName = function() {
   return this._name
 };
 var suzi = new Person('Suzi');
-suzi.getName();  // Suzi   (__proto__는 생략 가능한 프로퍼티 -> 생략하지 않는다면 undefined 출력 -> 이유는 03.this 단원에서 이미 배웠다! 계속 복습하며 공부하쟝)
+suzi.getName();  // Suzi   
+                // (__proto__는 생략 가능한 프로퍼티 -> 생략하지 않는다면 undefined 출력 -> 이유는 03.this 단원에서 이미 배웠다! 계속 복습하며 공부하쟝)
 var me = new Person('sunho');
 me.getName(); // sunho
 ```
