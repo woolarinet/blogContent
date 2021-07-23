@@ -42,7 +42,7 @@ thumb: 'js'
     - Grade 클래스의 인스턴스는 배열 메서드를 상속하지만 기본적으로는 일반 객체의 성질을 지니므로 삭제가 가능한 문제점이 생긴다.
     - push를 했을 때 0번째 인덱스에 70이 들어가고 length가 다시 1이 될 수 있었던 이유는 g.__proto__가 빈 배열 ([])을 가리키고 있기 때문.
     - ***위와 같이 클래스에 있는 값이 인스턴스의 동작에 영향을 미칠 경우, 클래스의 추상성을 해치게 된다.***
-## 클래스가 구체적인 데이터를 지니지 않게 하는 방법
+## 클래스가 구체적인 데이터를 지니지 않게 하는 방법 (*가볍게 읽고 이해하기* )
 1. 프로퍼티들을 다 지우고 새로운 프로퍼티 추가할 수 없게 하기
    ``` javascript
    delete Square.prototype.width;
@@ -76,3 +76,47 @@ thumb: 'js'
    // ...
    ```
     - subClass의 prototypedml __proto__가 SuperClass의 prototype을 바라보되, SuperClass의 인스턴스가 되지는 않으므로 앞서 소개한 두 방법보다 간단하면서 안전하다.
+4. 상위 클래스에서의 접근 수단 제공
+   ``` javascript
+   // ...
+   SubClass.prototype.super = function (propName) {
+     var self = this;
+     if (!propName) return function () {
+       SuperClass.apply(self, arguments);
+     }
+     var prop = SuperClass.prototype[propName];
+     if (typeof prop !== 'function') return prop;
+     return function () {
+       return prop.apply(self, arguments);
+     };
+     // ...
+   };
+   ```
+    - SuperClass 생성자 함수에 this.super()를 이용.
+## ES6의 클래스 및 클래스 상속
+   ``` javascript
+   var Rectangle = class {
+     constructor (width, height) {
+       this.width = width;
+       this.height = height;
+     }
+     getArea() {
+       return this.width * this.height;
+     }
+   };
+   var Square = class extends Rectangle {
+     constructor (width) {
+       super(width, width);
+     }
+     getArea () {
+       console.log('size is : ', super.getArea());
+     }
+   };
+   ```
+   - (10번째 줄): class 명령어 뒤에 'extends Rectangle' 라는 내용을 추가함으로써 상속관계설정 끝
+   - (12번째 줄): constructor 내부에서는 super라는 키워드를 함수처럼 사용할 수 있는데, 이 함수는 SuperClass의 constructor를 실행
+   - (15번째 줄): constructor 메서드를 제외한 다른 메서드에서는 super 키워드를 마치 객체처럼 사용가능 (*이때 객체는 SuperClass.prototype을 바라보는데, 호출한 메서드의 this는 'super'가 아닌 원래의 this를 그대로 따름* )
+
+  &nbsp;
+# 마치며
+- 코어자바스크립트라는 책을 추천받아 읽기 시작했는데 1회독을 한것 만으로도 상당히 깨달음을 많이 얻었다. 좀 더 근본적인 부분을 공부할 수 있어서 너무 좋았다. 현재 2회독하는 중인데 3회독한 후 다음 책으로 넘어가볼 생각이다.
