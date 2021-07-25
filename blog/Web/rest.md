@@ -56,5 +56,6 @@ thumb: 'web'
 > - <https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html>
 > - <https://gyoogle.dev/blog/web-knowledge/REST%20API.html>
 > - [https://blog.naver.com/PostView][https://blog.naver.com/PostView]
+
 [https://blog.naver.com/PostView]: https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=hoyeon0&logNo=50137172782
 
