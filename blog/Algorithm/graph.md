@@ -69,23 +69,42 @@ thumb: 'algorithm'
   denver.addRoute(elPaso.name, 140)
 
   const dijkstra = function (start, other) {
+    // route 해시 테이블은 주어진 도시로부터
+    // 다른 모든 도시까지의 모든 priceInfo 데이터와
+    // 도착지까지 가는데 거치는 도시를 포함한다.
     const routes = {}
+    // 위 데이터는 다음과 같다.
+    // { 도시: [ 가격, 원래 도시로부터의 경로 중 이 도시 바로 전에 들리는 도시 ]}
+    // ex) { Atlanta: [0, 'Atlanta'], Boston: [ 100, 'Atlanta' ], Chicago: [ 200, 'Denver' ] }
     routes[start.name] = [0, start.name]
+    // 위와 같이 시작도시에서 시작도시로 가는 비용은 0이다.
+
+    // 시작 도시 외에 다른 도시까지 가는 비용 및 경로는 아직 알려지지 않았으므로
+    // 데이터를 초기화할 때 그 밖의 도시는 모두 무한대 값을 할당한다.
     other.forEach((city) => (
-      routes[city.name] = [ Infinity, 0 ]
+      routes[city.name] = [ Infinity, '' ]
     ))
+    // 방문한 도시를 기록한다.
     let visited = []
+    // 시작도시를 현재 도시로 해서 방문을 시작
     let current = start
+    // 각 도시를 방문하는 루프를 시작
     while (current) {
+      // 현재 도시를 방문한다.
       visited.push(current.name)
+      // 현재 도시로부터의 각 경로를 확인한다.
       for (const [ city, priceInfo ] of Object.entries(current.routes)) {
+        // 시작 도시에서 다른 도시로의 경로가 route에 현재 기록된 값보다 저렴하면 업데이트 한다.
         if (routes[city][0] > priceInfo + routes[current.name][0]) {
           routes[city] = [ priceInfo + routes[current.name][0], current.name ]
         }
       }
+      // 다음으로 방문할 도시를 정한다.
       current = false
       let cheapest = Infinity
+      // 가능한 모든 경로를 확인한다.
       for (const [ city, priceInfo ] of Object.entries(routes)) {
+        // 이 경로가 현재 도시로부터의 가장 저렴한 경로이고, 아직 방문하지 않았다면 다음으로 방문할 도시가 된다.
         if (priceInfo[0] < cheapest && visited.indexOf(city) < 0) {
           cheapest = priceInfo[0]
           other.forEach((eachCity) => {
@@ -102,5 +121,11 @@ thumb: 'algorithm'
   const routes = dijkstra(atlanta, [ boston, chicago, denver, elPaso ])
   for (const [ city, priceInfo ] of Object.entries(routes)) {
     console.log(`# ${city}: ${priceInfo[0]}`)
+    // # Atlanta: 0
+    // # Boston: 100
+    // # Chicago: 200
+    // # Denver: 160
+    // # ElPaso: 280
+    // 위와같이 애틀랜타로부터 다른 모든 도시로 가는 가장 저렴한 가격을 보여준다.
   }
   ```
