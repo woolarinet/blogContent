@@ -12,8 +12,8 @@ thumb: 'algorithm'
   - 간선으로 연결된 정점들을 서로 **인접**한다고 말한다.
 - 관계에 방향성이 있는 그래프를 **방향 그래프**, 관계가 상호적인 (방향성이 없는) 그래프를 **무방향 그래프**라 부른다.
   - *ex) facebook, twitter*
-  ![무방향.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/algorithm/graph/2.png)
-  ![방향.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/algorithm/graph/3.png)
+
+  ![무방향.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/algorithm/graph/2.png)![방향.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/algorithm/graph/3.png)
 - 그래프를 간단히 해시테이블로 나타내보자.
   ``` javascript
   // 무방향 그래프
