@@ -61,7 +61,7 @@ module.exports = {
 };
 ```
 - 프로젝트 구조와 파일 형식에 맞게 config 파일을 만들어준다.
-- info 객체에는 title, description, contact 정보, version 명시할 수 있다.
+- info 객체에는 title, description, contact 정보, version 등을 명시할 수 있다.
 
 ## Route Setting
 
