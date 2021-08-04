@@ -2,7 +2,7 @@
 title: '스케줄러 사용하기'
 category: 'Node.js'
 desc: '스케줄러 모듈 비교 및 내가 선택한 node-schedule 사용법'
-date: '2021-08-02'
+date: '2021-08-04'
 thumb: 'node'
 ---
 
