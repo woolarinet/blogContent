@@ -92,6 +92,6 @@ server.listen(port, host, () => {
 - 이번에 각 모듈을 비교하며 개발자가 한 기능을 하는 모듈을 사용하고 싶을 때 유사한 모듈들의 정보를 끌어와 비교해주는 웹서비스를 만들어볼까? 하고 문득 생각하게 되었다 :)
 
 ## References
-[npm_node-schedule]
+- [npm_node-schedule]
 
 [npm_node-schedule]: https://www.npmjs.com/package/node-schedule
