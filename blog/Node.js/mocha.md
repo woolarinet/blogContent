@@ -228,6 +228,11 @@ describe("LIFE_CYCLE", function () {
   - 제일 중요한 비동기제어 코드를 테스트하는 걸 익혀봄으로써 간단한 부분까지는 적용시킬 수 있을 것 같다.
   - 아직 사용하지 않은 문법/함수 들은 추후에 필요 시마다 공식문서를 참고하며 볼 예정이다.
 
+## Test
+``` javascript
+mocha -w mocha.spec.js
+```
+- -w 옵션을 주면 테스트 코드를 수정할 때마다 자동으로 테스트를 진행해준다.
 
 ## Reference
 - <https://www.chaijs.com/>
