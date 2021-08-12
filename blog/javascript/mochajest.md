@@ -48,7 +48,7 @@ describe('loginService', () => {
     });
 };
 ```
-
+  &nbsp;
 ### 시나리오2 - 기능테스트 (사용자가 정보를 얻음)
 
 #### Mocha
@@ -62,7 +62,7 @@ describe('loginService', () => {
     it('should fetch a user profile given a user id', () => {
         const expectedReturnObject = {
             id: 'abc123',
-            username: 'joebloggs97'
+            username: 'sunho'
         };
         const getStub = sinon.stub(userRepository, 'get');
         getStub.returns(expectedReturnObject);
@@ -83,7 +83,7 @@ import userRepository from '../repositories/user';
 const mockGet = jest.fn(() => {
     return {
             id: 'abc123',
-            username: 'joebloggs97'
+            username: 'sunho'
         };
 });
 
@@ -97,7 +97,7 @@ describe('loginService', () => {
     it('should fetch a user profile given a user id', () => {
         const expectedReturnObject = {
             id: 'abc123',
-            username: 'joebloggs97'
+            username: 'sunho'
         };
 
         const response = loginService.getUserProfile(expectedReturnObject.id);
