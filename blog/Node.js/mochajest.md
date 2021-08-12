@@ -1,9 +1,9 @@
 ---
 title: 'Mocha와 Jest의 차이점'
-category: 'Node.js'
+category: 'javascript'
 desc: 'mocha vs Jest'
 date: '2021-08-11'
-thumb: 'node'
+thumb: 'js'
 ---
 
 # Jest
