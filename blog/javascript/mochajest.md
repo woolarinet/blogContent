@@ -134,6 +134,6 @@ describe('loginService', () => {
 - [dev.to/willholmes]
 - [npm-trend]
 
-[dev.to/willhomes]: https://dev.to/willholmes/why-i-think-jest-is-better-than-mocha-chai-78l
+[dev.to/willholmes]: https://dev.to/willholmes/why-i-think-jest-is-better-than-mocha-chai-78l
 
 [npm-trend]: https://www.npmtrends.com/jest-vs-mocha
