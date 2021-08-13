@@ -2,7 +2,7 @@
 title: 'Serverless Architecture란?'
 category: 'Devops'
 desc: 'Serverless Architecture 간단 정리'
-date: '2021-08-06'
+date: '2021-08-13'
 thumb: 'devops'
 ---
 
