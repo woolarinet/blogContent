@@ -66,6 +66,7 @@ thumb: 'database'
   |어떤 것|Entity Type|Entity|
   |연관|Relationship|Instance|
   |성격|Attributes|Attribute Value|
+  
   - 실무에서는 단수, 복수 구분없이 관계라고 표현하는 경우가 많으며 엔터티 또한 단수, 복수 모두 표현하는 경우가 많다고 한다. 엔터티를 집합개념으로 사용하는 경우에서는 인스턴스를 단수개념으로 사용한다고 한다.
 
 ## 데이터 독립성
