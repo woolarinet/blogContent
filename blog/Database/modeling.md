@@ -61,7 +61,7 @@ thumb: 'database'
   - 업무가 관여하는 **어떤 것** (Things), **어떤 것이 가지는 성격** (Attributes), **업무가 관여하는 어떤것** (Relationships)간의 관계
   - 사물이나 사건 등을 Things, Things가 가지는 세부사항을 Attributes, Things간의 연관성을 Relationship이라고 표현한다.
 - 그리고 이들을 엔터티, 속성, 관계로 표현한다.
-- |개념|복수개념|단수개념
+- |개념|복수개념|단수개념|
   |---|----|-------|
   |어떤 것|Entity Type|Entity|
   |연관|Relationship|Instance|
