@@ -2,7 +2,7 @@
 title: '엔터티, 속성, 관계'
 category: 'Database'
 desc: '엔터티, 속성, 관계에 대해 좀 더 깊은 공부'
-date: '2021-08-15'
+date: '2021-08-16'
 thumb: 'database'
 ---
 
