@@ -4,6 +4,7 @@ category: 'Web'
 desc: '웹 어플리케이션 아키텍쳐(Web Application Architecture)의 기본적인 이해'
 date: '2021-07-14'
 thumb: 'web'
+keyword: 'Web', 'Browser', 'Web Application', 'Web Server', 'Web Application Server', 'Web Application Architecture' 
 ---
 
 # 웹 어플리케이션 아키텍쳐 (Web Application Architecture)
@@ -12,7 +13,7 @@ thumb: 'web'
 
 웹 어플리케이션의 구조를 간략히 봤을 때 위와 같은 구조가 나온다. 크게는 클라이언트 사이드(프레젠테이션 로직 처리)과 서버 사이드(비지니스 로직 처리)로 나뉘며 기본적으로 웹 브라우저, 웹 서버, 웹 어플리케이션 서버 데이터베이스 서버로 구성되어 있다.
   
-&nbsp;    
+&nbsp;
 ## 웹 브라우저 (Web Browser)
 
 웹 브라우저는 서버와의 Request, Response 을 통해 상호작용하며 어플리케이션의 기능을 처리하고 HTML과 CSS 명세에 따라 HTML파일을 해석 및 표시해준다.
