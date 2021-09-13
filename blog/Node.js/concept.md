@@ -4,6 +4,7 @@ category: 'Node.js'
 desc: 'Node란 무엇인지 근본적인 부분부터 알아가기'
 date: '2021-07-28'
 thumb: 'node'
+keyword: 'Node.js', 'Backend', 'Javascript', 'Event Loop', 'Non Blocking',
 ---
 
 # Node.js란?

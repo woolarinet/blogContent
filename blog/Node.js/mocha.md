@@ -4,6 +4,7 @@ category: 'Node.js'
 desc: 'mocha 사용법 및 주요 문법 정리'
 date: '2021-08-06'
 thumb: 'node'
+keyword: 'Mocha', 'Jest', 'Chai', 'TDD', 'BDD', 'Test FrameWork'
 ---
 
 # Mocha, chai
