@@ -49,6 +49,7 @@ keyword: 'Devops', 'MicroServices', 'MSA', 'Docker', 'Monolithic'
   - 위에서 설명한, 네임스페이스와 Cgroup과 같은 리눅스의 커널 기능을 사용하여 가상화한다.
   - 다양한 클라우드 서비스 모델과 같이 사용 가능하다. (IaaS, PaaS, SaaS)
     - `이미지`: 필요한 프로그램과 라이브러리, 소스를 설취한 뒤 만든 하나의 파일
+      - 상태 값을 가지고 있지 않으며 불변의 속성이 있다.
 
     ![msa.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Devops/msa_docker/3.png)
 
@@ -56,6 +57,15 @@ keyword: 'Devops', 'MicroServices', 'MSA', 'Docker', 'Monolithic'
     - Docker Engine: 이미지, 네트워크 등의 관리 역할
     - Containerd: Container를 관리해주는 Daemon
     - 위 두개가 각각 돌아가기 때문에 Docker Engine을 재시작해도 이미지에 영향이 없다.
+
+    ### 도커 Daemon
+    - 도커의 엔진은 외부에서 API 입력을 받아 도커 엔진의 기능을 수행하는데, 서버로서 입력을 받을 준비가 된 상태를 뜻한다.
+    - 사용자가 docker명령어를 입력하면 소켓을 통해 도커 데몬에게 명령어가 전달된다.
+      - 데몬은 이 명령어를 파싱하고 명령어에 해당하는 작업을 수행한다.
+      - 수행 결과를 사용자에 반환하며 결과를 출력한다.
+    ### 도커 Registry
+    - 도커의 이미지를 저장하고 없다면 Dockerhub에 접근한다.
+    - 로컬 레지스트리에 있다면 Dockerhub에 접근하지 않고 이미지를 저장할 수 있다.
     ### 도커의 한계
     - 서비스가 커질수록 관리해야 하는 컨테이너의 양이 상당히 증가한다.
     - 도커를 사용하여 관리해도 쉽지않은 형태이다.
