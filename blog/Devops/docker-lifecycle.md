@@ -18,7 +18,7 @@ keyword: 'Devops', 'MicroServices', 'MSA', 'Docker', 'Monolithic', 'lifecycle'
   - `Volume`: 파일시스템을 가상화한 개념이다. 목적지 없이 생성되면 다른 가상 머신의 가상 디스크처럼 활용되며, 호스트의 특정 파일 시스템에 마운트하여 사용할 수도 있다.
     - 컨테이너 내부에서 실행할 스크립트, 설정 파일 등은 컨테이너 내부로 복사되어 실행되기도 하지만 주로 `Volume`을 통해 전달 된다.
     - `Mysql 공식 이미지에서 제시하는 커스텀 설정파일을 볼륨을 통해 전달하는 명령어`
-      - ```
+      - ``` bash
         $ docker run --name some-mysql -v /my/custom:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
         ```
 # Container Lifecycle
@@ -27,7 +27,7 @@ keyword: 'Devops', 'MicroServices', 'MSA', 'Docker', 'Monolithic', 'lifecycle'
 
 - 생성, 수행, 임시중단, 종료, 강제종료 등의 상태가 있으며 ps 명령으로 목록을 확인할 수 있다.
 - ps 결과가 늘어나는 것을 막으려면 종료된 컨테이너들을 rm으로 자주 지워주는 것이 좋다.
-- ```
+- ``` bash
   $ docker ps # shows running containers
   $ docker ps --all # shows created, running, stopped, ... containers
   $ docker run python:3.9 python -c 'print("hello world!")' # starts running container
