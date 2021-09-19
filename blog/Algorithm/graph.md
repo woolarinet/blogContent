@@ -4,6 +4,7 @@ category: 'Algorithm'
 desc: '그래프 기본 개념과 다익스트라 알고리즘'
 date: '2021-07-31'
 thumb: 'algorithm'
+keyword: 'algorithm', 'graph', 'dijstra'
 ---
 
 # 그래프란? 

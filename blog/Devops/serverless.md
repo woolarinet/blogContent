@@ -4,6 +4,7 @@ category: 'Devops'
 desc: 'Serverless Architecture 간단 정리'
 date: '2021-08-13'
 thumb: 'devops'
+keyword: 'Devops', 'Serverless', 'Lambda', 'AWS', 'Architecture'
 ---
 
 # Serverless Architecture

@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] this 전반적인 이해'
 date: '2021-07-15'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'this'
 ---
 
 # 전역 공간에서의 this

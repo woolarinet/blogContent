@@ -4,6 +4,7 @@ category: 'Node.js'
 desc: 'Node.js의 핵심원리 및 철학'
 date: '2021-07-29'
 thumb: 'node'
+keyword: 'Node.js', 'Reactor Pattern', 'Libuv', 'V8'
 ---
 
 # Node.js 철학

@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 프로토타입에 대한 이해'
 date: '2021-07-16'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'Prototype', 'Property'
 ---
 
 # 프로토타입의 개념 이해

@@ -4,6 +4,7 @@ category: 'Database'
 desc: '데이터 모델링 기본 개념의 이해'
 date: '2021-08-14'
 thumb: 'database'
+keyword: 'database', 'modeling', 'oracle', 'mysql', 'SQL'
 ---
 
 # 모델링

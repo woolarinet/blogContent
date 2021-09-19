@@ -4,6 +4,7 @@ category: 'Database'
 desc: '식별자 기본 개념'
 date: '2021-08-23'
 thumb: 'database'
+keyword: 'database', 'modeling', 'oracle', 'mysql', 'SQL'
 ---
 
 # 식별자

@@ -4,7 +4,7 @@ category: 'Web'
 desc: 'REST에 관한 전반적인 개념 정리'
 date: '2021-07-15'
 thumb: 'web'
-keyword: 'Rest API', 'Restful', 'HTTP', 'Web'
+keyword: 'Web', 'Browser', 'Web Application', 'Rest API', 'Restful', 'HTTP', 'Web'
 ---
 
 # REST (Representational State Transfer)

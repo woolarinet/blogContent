@@ -4,6 +4,7 @@ category: 'Node.js'
 desc: '테스트 코드의 중요성과 의미'
 date: '2021-08-05'
 thumb: 'node'
+keyword: 'Node.js', 'Test Coverage', 'Code Coverage', 'TDD', 'BDD'
 ---
 
 # 테스트 커버리지? 코드 커버리지?

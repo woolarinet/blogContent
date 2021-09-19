@@ -4,7 +4,7 @@ category: 'Web'
 desc: 'SPA(Single Page Application) 기본 개념'
 date: '2021-07-15'
 thumb: 'web'
-keyword: 'SPA', 'MPA', 'Web', 'Component', 'Routing'
+keyword: 'Web', 'Browser', 'Web Application', 'SPA', 'MPA', 'Web', 'Component', 'Routing'
 ---
 
 # MPA (Multi-Page-Application)

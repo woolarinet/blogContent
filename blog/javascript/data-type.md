@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 데이터 타입 요약 정리'
 date: '2021-07-14'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'Data Type', 'var', 'const', 'hoisting'
 ---
 
 # 배경지식

@@ -4,6 +4,7 @@ category: 'javascript'
 desc: 'mocha vs Jest'
 date: '2021-08-11'
 thumb: 'js'
+keyword: 'Javascript', 'Test Framework', 'Mocha', 'Jest', 'TDD', 'BDD'
 ---
 
 # Jest

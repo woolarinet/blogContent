@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 콜백 함수, 콜백지옥, 비동기 제어'
 date: '2021-07-16'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'callback', 'axios', 'promise', 'async', 'await'
 ---
 
 # 콜백 함수

@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 실행 컨텍스트 요약 정리'
 date: '2021-07-14'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'Excution Context', 'Variable Environment', 'Lexical Environment', 'This Binding'
 ---
 
 # 실행 컨텍스트란?

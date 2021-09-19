@@ -4,6 +4,7 @@ category: 'Node.js'
 desc: 'Swagger 사용법 :)'
 date: '2021-08-02'
 thumb: 'node'
+keyword: 'Node.js', 'swagger', 'open api'
 ---
 
 ##### *자세한 부분은 하단의 References를 참고해주세요~!*

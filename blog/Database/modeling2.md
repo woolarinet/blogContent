@@ -4,6 +4,7 @@ category: 'Database'
 desc: '모델의 성능을 올리기위한 이론적 개념 (정규화, 반정규화)'
 date: '2021-08-29'
 thumb: 'database'
+keyword: 'database', 'modeling', 'oracle', 'mysql', 'SQL'
 ---
 
 # 성능 데이터 모델링 고려사항

@@ -4,6 +4,7 @@ category: 'javascript'
 desc: '[코어 자바스크립트] 자바스크립트에서 클래스란?'
 date: '2021-07-22'
 thumb: 'js'
+keyword: 'Javascript', 'Core Javascript', 'class', 'prototype', 'es6'
 ---
 
 # 자바스크립트의 클래스
