@@ -7,7 +7,7 @@ thumb: 'devops'
 keyword: 'Devops', 'MicroServices', 'MSA', 'Docker', 'Monolithic', 'lifecycle'
 ---
 
-## :antigua_barbuda: Virtualized Resources
+## Virtualized Resources
 - Docker 컨테이너의 환경에 가장 많은 영향을 끼치는 두 자원은 네트워크와 파일 시스템이다.
   - `Network`: Docker 데몬은 여러 네트워크 인터페이스를 가질 수 있으며, 해당 인터페이스들의 호스트 네트워크 접근을 관리한다. 컨테이너들은 자신이 할당받은 네트워크 인터페이스만을 통해 내부 또는 외부와 통신할 수 있다. 격리된 네트워크는 외부로부터 접근을 적절히 차단한다면 각종 공격으로 컨테이너를 일차적으로 방어할 수 있는 역할이 된다.
     - 기본적으로 컨테이너들은 `bridge` 모드의 네트워크 인터페이스를 가진다.
