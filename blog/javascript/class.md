@@ -8,7 +8,7 @@ keyword: 'Javascript', 'Core Javascript', 'class', 'prototype', 'es6'
 ---
 
 # 자바스크립트의 클래스
-- 자바스크립트는 프로토타이 기반 언어 (*클래스의 개념이 존재하지 않는다.* )
+- 자바스크립트는 프로토타입 기반 언어 (*클래스의 개념이 존재하지 않는다.* )
 - 따라서 클래스 관점에서 바라본 프로토타입 시스템은 예제와 같이 이해할 수 있다.
   ``` javascript
   var Rectangle = function (width, height) {  // 생성자
