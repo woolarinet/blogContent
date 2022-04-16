@@ -1,16 +1,15 @@
 ---
-title: 'Swagger로 api 문서 작성하기'
+title: 'NestJS + Swagger api 명세 작성'
 category: 'Node.js'
-desc: 'Swagger 사용법 :)'
-date: '2021-08-02'
+desc: 'NestJS에 Swagger 적용하기'
+date: '2022-04-15'
 thumb: 'node'
-keyword: 'Node.js', 'swagger', 'open api'
+keyword: 'Node.js', 'swagger', 'open api', 'NestJS'
 ---
 
-##### *자세한 부분은 하단의 References를 참고해주세요~!*
+##### *자세한 부분은 하단의 References를 참고해주세요*
 
 # Swagger
-- API 제작이 끝난 후, 프론트 개발자 분에게 API를 전달할 때 github, notion 등 많은 방법이 있지만, 수기로 작성해야되는 불편함이 있다.
 - Swagger 공식문서를 보면 다음과 같이 말한다.
   
   >  Accurate, up-to-date documentation is essential to a successful API initiative. With SwaggerHub, you can generate interactive documentation automatically during design, making it easy for both API consumers and internal users to learn and work with your APIs.
@@ -21,98 +20,139 @@ keyword: 'Node.js', 'swagger', 'open api'
   >  - Managing access to API docs with built-in permissions and user roles 
   >  - Versioning and publishing OAS documentation to ensure consistency
 
-- 즉, api의 개발과 동시에 명세방법에 따라 주석을 작성하여 api문서의 자동화와 최신화를 동시에 하여 사용자는 최소한의 구현논리로 서비스를 이해하고 상호 작용할 수 있다.
-
-![swagger.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Node.js/swagger/1.png)
-- 위 화면과 같이 프로젝트 내에서 정의한 내용들을 보기좋은 UI로 제공한다 :)
+- 즉, api의 개발과 동시에 명세방법에 따라 주석을 작성하여 api문서의 자동화와 최신화를 동시에 하여 사용자는 최소한의 구현논리로 서비스를 이해하고 상호 작용할 수 있다고 판단된다.
 
 ## Installation
 
-``` javascript
-npm i swagger-jsdoc swagger-ui-express --save-dev
+```bash
+npm install --save @nestjs/swagger swagger-ui-express
 ```
-- 개발용 라이브러리이기 때문에 devDependencies에 추가해준당
 
 ## Options
 
-``` javascript
-// ../config/swagger.js
+```typescript
+// swagger.option.ts
 
-const swaggerUi = require('swagger-ui-express');
-const swaggereJsdoc = require('swagger-jsdoc');
+import { DocumentBuilder } from '@nestjs/swagger';
 
-const options = {
-    swaggerDefinition: {
-        info: {
-            title: 'Test API',
-            version: '1.0.0',
-            description: 'Test API with express',
-        },
-        host: 'localhost:3000',
-        basePath: '/'
-    },
-    apis: ['./routes/*.js', './routes/api/*.js']
-};
+export class SwaggerFactory {
+  public builder: DocumentBuilder;
+  constructor (private readonly app: INestApplication) {
+    this.builder = new DocumentBuilder();
+  }
 
-const specs = swaggereJsdoc(options);
+  public setup() {
+    const document = this.createDocument();
+    SwaggerModule.setup('api-docs', this.app, document);
+  }
+  
+  private initializeOptions() {
+    return this.builder
+      .setTitle('My Server')
+      .setDescription('This is API Docs for My Server')
+      .setVersion('1.0')
+      .build();
+  }
 
-module.exports = {
-    swaggerUi,
-    specs
-};
+  private createDocument() {
+    const config = this.initializeOptions();
+    return SwaggerModule.createDocument(this.app, config);
+  }
+}
 ```
-- 프로젝트 구조와 파일 형식에 맞게 config 파일을 만들어준다.
-- info 객체에는 title, description, contact 정보, version 등을 명시할 수 있다.
 
-## Route Setting
+## Setting
 
-``` javascript
-const { swaggerUi, specs } = require('/config/swagger');
+```typescript
+// main.ts
 
-//...
+...
 
-app.use('/api', swaggerUi.serve, swaggerUi.setup(specs))
+const swaggerFactory = new SwaggerFactory(app);
+swaggerFactory.setup();
+
+...
 ```
 
 ## Use
+- 컨트롤러 최상단에 공통적인 Response에 대한 정의를 한다.
+- 각 컨트롤러 위에는 요청과 응답에 대한 상세정의 및 Http 상태코드 등을 정의한다.
+```typescript
+// app.controller.ts
 
-``` javascript
-/**
- * @swagger
- *  /main/community:
- *    get:
- *      tags:
- *      - main
- *      summary: 커뮤니티 콘텐츠 목록
- *      description: 좋아요를 가장 많이 받은 커뮤니티 글 Top 20
- *      produces:
- *      - application/json
- *      parameters:
- *        - in: query
- *          name: category
- *          required: false
- *          schema:
- *            type: integer
- *            description: 카테고리
- *      responses:
- *       200:
- *        description: 커뮤니티 조회 성공
- */
+import {
+  ApiBadRequestResponse,
+  ApiBody, ApiCreatedResponse,
+  ApiInternalServerErrorResponse,
+  ApiNoContentResponse,
+  ApiNotFoundResponse,
+  ApiOkResponse,
+  ApiOperation, 
+  ApiQuery,
+  ApiTags
+} from '@nestjs/swagger';
+
+@Controller('Example')
+@ApiTags('Example')
+@ApiBadRequestResponse({
+  status: 400,
+  description: '잘못된 파라미터'
+})
+@ApiInternalServerErrorResponse({
+  status: 500,
+  description: '서버 로직 문제'
+})
+export class ExampleController {
+  
+  // ...
+
+  @Post()
+  @HttpCode(201)
+  @ApiOperation({
+    summary: 'create',
+    description: 'This is a description for POST API'
+  })
+  @ApiBody({ type: CreateExampleDto })
+  @ApiCreatedResponse({ description: 'This is a Response', type: String })
+  public async create(@Body() exampleData: CreateExampleDto) {
+    return await this.exampleService.create(categoryData);
+  }
+
+  // ...
+}
 ```
-- 각 api의 http 메소드, 파라미터 조건 등에 맞게 작성하여준다.
-- 그 후, 배포되어있는 개발서버에 반영해주면 사진과 같이 명세서가 자동으로 업데이트 된다. (*위 코드와는 다른 예제 명세서이다.* )
-  ![swagger2.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Node.js/swagger/2.png)
+- 그리고 interface 부분이나 Entity 부분에도 각 Property에 대한 정의를 해준다.
+```typescript
+// create-example.dto.ts
 
-### 마치며
-- 오늘 UI의 특정 부분을 다른 방식으로 교체하는 작업을 맡았는데 프론트 개발자분과 협업하며 swagger를 사용하였고, 집에와서 다시 정리를 해보았다.
-- 점점 더 생산성을 높이기 위해 단위테스트 모듈 및 여러 자동화 도구를 공부하며 실무에서 사용해볼 예정이다 :)
-- 하루하루 폭풍성장을 해버릴 예정 ㅎㅎ
+import { IsString, IsNumber, IsOptional } from "class-validator";
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+
+export class CreateExampleDto {
+  @IsNumber()
+  @IsOptional()
+  @ApiPropertyOptional({
+    description: 'This is a Id Property',
+    default: 0,
+    example: 5
+  })
+  readonly id: number;
+
+  @IsString()
+  @ApiProperty({ description: 'This is a Name Property', required: true })
+  readonly name: string
+}
+```
+- 예시 페이지 (위 코드와 연관 없습니다.)
+  ![swagger2.png](https://raw.githubusercontent.com/woolarinet/blog_content/main/images/Node.js/swagger/2.png)
 
 ## References
 - [Swagger-Docs]
 - [Swagger-github]
-- <https://gngsn.tistory.com/69>
+- [NestJS-Docs]
 
 [Swagger-Docs]: https://swagger.io/docs/
 
 [Swagger-github]: https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#infoObject
+
+[NestJS-Docs]: https://docs.nestjs.com/openapi/introduction
