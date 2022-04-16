@@ -31,12 +31,12 @@ npm install --save @nestjs/swagger swagger-ui-express
 ## Options
 
 ```typescript
-// swagger.option.ts
+// swagger.factory.ts
 
 import { DocumentBuilder } from '@nestjs/swagger';
 
 export class SwaggerFactory {
-  public builder: DocumentBuilder;
+  private builder: DocumentBuilder;
   constructor (private readonly app: INestApplication) {
     this.builder = new DocumentBuilder();
   }
@@ -66,12 +66,12 @@ export class SwaggerFactory {
 ```typescript
 // main.ts
 
-...
+// ...
 
 const swaggerFactory = new SwaggerFactory(app);
 swaggerFactory.setup();
 
-...
+// ...
 ```
 
 ## Use
