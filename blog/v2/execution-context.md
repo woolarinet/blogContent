@@ -14,5 +14,5 @@ descriptions:
 'hoisting'이란 변수 정보를 수집하는 과정을 이해하기 쉬운 방법으로 대체한 가상개념이다. environmentRecord는 현재 실행될 컨텍스트의 대상 코드 내에 어떤 식별자들이 있는지에만 관심이 있기에 호이스팅 시에 변수명만 끌어올리고 할당 과정은 원래자리에 남겨둔다.
 'ThisBinding'은 익숙한 단어인데, this 식별자가 바라봐야 할 대상 객체를 뜻한다.
 <스코프, 스코프 체인, outerEnvironmentReference>
-"스코프"란, 식별자의 유효범위이다. 어떤 경계 A의 외부에서 선언한 변수는 A의 외부와 내부 모두 접근이 가능하지만, A 내부에서 선언한 변수는 A의 내부에서만 접근 가능하다. 이러한 스코프를 안에서부터 바깥으로 검색해나가는 것을 "스코프 체인"이라고 부른다. 그리고 이를 가능케 하는 것이 "outerEnvironmentReference" 이다. outerEnvironmentReference 는 현재 호출된 함수가 선언될 당시의 LexicalEnvironment를 참조한다.
+'스코프'란, 식별자의 유효범위이다. 어떤 경계 A의 외부에서 선언한 변수는 A의 외부와 내부 모두 접근이 가능하지만, A 내부에서 선언한 변수는 A의 내부에서만 접근 가능하다. 이러한 스코프를 안에서부터 바깥으로 검색해나가는 것을 '스코프 체인'이라고 부른다. 그리고 이를 가능케 하는 것이 'outerEnvironmentReference' 이다. outerEnvironmentReference 는 현재 호출된 함수가 선언될 당시의 LexicalEnvironment를 참조한다.
 ---
