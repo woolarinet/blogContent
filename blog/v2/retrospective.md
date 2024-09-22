@@ -17,7 +17,7 @@ I was really lucky. It wasn’t because I was exceptional, but just because I st
 description2: Fear is a mile wide, and an inch deep. And so it looks like the ocean, that you are gonna step into and drown. But as soon as you step into it, you realize it was not that deep at all and you can keep walking through it.
 descriptions:
 
-To everyone reading this, I want to say
+To everyone reading this, I want to say:
 
 If someone like me can do it, you can too. We all have potential, and your potential might be even greater than mine. Don’t give up. If you keep going, good opportunities will come, and that opportunity will be yours.
 ---
