@@ -1,6 +1,6 @@
 ---
 id: 1
-img: javascript/vancouver.png
+img: retrospective/vancouver.png
 title: [Retrospective] My Career Journey and New Challenges in Vancouver
 commentor: Reed
 date: 21 September 2024
